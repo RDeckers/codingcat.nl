@@ -6,13 +6,13 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Coding Cat's Capricious Conversations
+title: Coding Cat
 email: admin@codingcat.nl
 description: > # this means to ignore newlines until "baseurl:"
   A (mostly) technical blog focusing on scientific & high-performance computing.
 baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "https://codingcat.nl" # the base hostname & protocol for your site
-#twitter_username: 
+#twitter_username:
 github_username:  RDeckers
 
 # Build settings

@@ -1,10 +1,12 @@
 /**
  * Syntax highlighting styles
  */
+
 .highlight {
     background: #fff;
-    @extend %vertical-rhythm;
-
+    //@extend %vertical-rhythm;
+    margin-left:-10%;
+    margin-right:-10%;
     .highlighter-rouge & {
       background: #eef;
     }
