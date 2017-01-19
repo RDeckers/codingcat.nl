@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Jaldi:700|Josefin+Sans|Megrim|Nova+Square|Nunito:700|Prosto+One|Quantico');
+
+@font-face{ //flows more wobbly,open ended C's and such, puts J an y below the line.
+  font-family: 'opensansL';
+  src: local('OpenSans-Light');
+  src: url('#{$font-dir}Open_Sans/OpenSans-Light.ttf');
+}
+
+@font-face{
+  font-family: 'opensans';
+  src: local('OpenSans-Regular');
+  src: url('#{$font-dir}Open_Sans/OpenSans-Regular.ttf');
+}
+
+@font-face{
+  font-family: 'JuliusSans';
+  src: local('JuliusSansOne-Regular');
+  src: url('#{$font-dir}Julius_Sans_One/JuliusSansOne-Regular.ttf');
+}
+
+@font-face{
+  font-family: 'RobotoCondensed';
+  src: local('RobotoCondensed-Light');
+  src: url('#{$font-dir}Roboto/Roboto-Light.ttf');
+}
+
+@font-face{
+  font-family: 'PoiretOne';
+  src: local('PoiretOne-Regular');
+  src: url('#{$font-dir}Poiret_One/PoiretOne-Regular.ttf');
+}
+
+@font-face{
+  font-family: 'Quicksand';
+  src: local('Quicksand-Bold');
+  src: url('#{$font-dir}Quicksand/Quicksand-Bold.ttf');
+}

@@ -2,104 +2,64 @@
  * Site header
  */
 
-.site-header {
-    background-color: black;
-    //border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $border-color;
-    min-height: 56px;
+@import "mixins/glitch.scss";
 
-    // Positioning context for the mobile navigation icon
-    position: relative;
+.site-header {
+    color: $background-color;
+    background-color: $primary-color;
+    border-bottom: 3px solid $highlight-color;
+    width: 100%;
+    margin: 0;
+    padding-top: 32px;
+    display: inline-block;
+    > .wrapper{
+    }
+}
+
+.glitched {
+
 }
 
 .site-title {
-  font-family:  title-font;
-  font-size: 36px;
-  line-height: 52px;
-  letter-spacing: 1px;
-  margin-bottom: 0;
-  float: left;
-  &,
-  &:visited {
-      color: white;
+   float: left;
+   display: block;
+  // color: inherit;
+   line-height: 52px;
+  // padding-left: 0.25em;
+  // padding-top: 0.55em;
+  // padding-bottom: 0.5em;
+  font-size: 52px;
+  font-family:  $title-font-family;
+  > a{
+    text-decoration:none;
+    color: $background-color;
   }
+  @include textGlitch("site-title", 17, $background-color, $primary-color, $secondary-color, $tertiary-color, 450, 115);
+
 }
 
-.site-nav {
-    float: right;
-    line-height: 56px;
-
-    .menu-icon {
-        display: none;
-    }
-
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
-
-        // Gaps between nav items, but not on the last one
-        &:not(:last-child) {
-            margin-right: 20px;
-        }
-    }
-
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: $spacing-unit / 2;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-
-            &:not(:last-child) {
-                margin-right: 0;
-            }
-            margin-left: 20px;
-        }
+.contact-list{
+    max-height: 64px;
+    margin: 0;
+    float:right;
+    height: 100%;
+    list-style: none;
+    display: block;
+    li{
+      padding-top: 2px;
+      padding-bottom: 2px;
+      padding-right: 2px;
+      height: 60px;
+      display: inline-block;
     }
 }
-
 
 
 /**
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
+    border-top: 1px solid $highlight-color;
     padding: $spacing-unit 0;
 }
 
@@ -108,15 +68,9 @@
     margin-bottom: $spacing-unit / 2;
 }
 
-.contact-list,
-.social-media-list {
-    list-style: none;
-    margin-left: 0;
-}
-
 .footer-col-wrapper {
     font-size: 15px;
-    color: $grey-color;
+    color: $primary-color;
     margin-left: -$spacing-unit / 2;
     @extend %clearfix;
 }
@@ -187,7 +141,7 @@
 
 .post-meta {
     font-size: $small-font-size;
-    color: $grey-color;
+    color: lighten($text-color, 40%);
 }
 
 .post-link {
@@ -200,22 +154,44 @@
 /**
  * Posts
  */
-.post-header {
-    margin-bottom: $spacing-unit;
+
+.post {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
-.post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
-
-    @include media-query($on-laptop) {
-        font-size: 36px;
+.post-header {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  margin-bottom: $spacing-unit;
+  .post-subtitle .post-title p{
+      margin-top: 0;
+      margin-bottom: 0;
     }
+  .post-subtitle{
+    font-family: $title-font-family;
+    font-size: 24px;
+  }
+  .post-title {
+      font-family: $title-font-family;
+      font-size: 36px;
+      @include media-query($on-laptop) {
+          font-size: 36px;
+      }
+}
+
 }
 
 .post-content {
     margin-bottom: $spacing-unit;
+
+    p {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 70%;
+    }
 
     h2 {
         font-size: 32px;

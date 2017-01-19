@@ -3,63 +3,36 @@
 ---
 @charset "utf-8";
 
+$font-dir: "{{site.baseurl}}/fonts/";
 
-
-// Our variables
-
-@font-face{ //flows more wobbly,open ended C's and such, puts J an y below the line.
-  font-family: 'opensansL';
-  src: local('OpenSans-Light');
-  src: url('{{ site.baseurl}}/fonts/Open_Sans/OpenSans-Light.ttf');
-}
-
-@font-face{
-  font-family: 'opensans';
-  src: local('OpenSans-Regular');
-  src: url('{{ site.baseurl}}/fonts/Open_Sans/OpenSans-Regular.ttf');
-}
-
-@font-face{
-  font-family: 'roboto-condensed';
-  src: local('RobotoCondensed-Light');
-  src: url('{{ site.baseurl}}/fonts/Roboto/Roboto-Light.ttf');
-}
-
-@font-face{
-  font-family: 'title-font';
-  src: local('PoiretOne-Regular');
-  src: url('{{ site.baseurl}}/fonts/Poiret_One/PoiretOne-Regular.ttf');
-}
-
+$title-font-family: Josefin Sans;
 $base-font-family: opensansL;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$base-line-height: 1.5em;
+
+$primary-color : #04052e;
+$secondary-color: #5cf64a;
+$tertiary-color: #ff30a5;
+$highlight-color: black;
+
+$text-color: $primary-color;
+$background-color: #ffffff;
 
 $spacing-unit:     0.5em;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
 
-$border-color: #DDFFD0;
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+// $grey-color:       #828282;
+// $grey-color-light: lighten($grey-color, 40%);
+// $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
 $content-width:    35em;
 $on-palm:          600px;
 $on-laptop:        800px;
 
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
+
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
         @content;
@@ -67,9 +40,9 @@ $on-laptop:        800px;
 }
 
 
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+        "fonts",
         "base",
         "layout",
         "syntax-highlighting"
